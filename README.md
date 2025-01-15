@@ -1,29 +1,4 @@
-# start-page
+![Screenshot 2025-01-15 at 11-44-28 Vite App](https://github.com/user-attachments/assets/7b803ef5-c6b9-400f-89a3-40baf94d0628)
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-yarn
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-yarn dev
-```
-
-### Compile and Minify for Production
-
-```sh
-yarn build
-```
+# Why I use Vue? I dont know. 
