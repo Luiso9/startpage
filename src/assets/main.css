@@ -20,9 +20,9 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-image: url("@/assets/bg2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+	background-image: url("@/assets/bg2.jpg") ;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .container {
@@ -74,7 +74,7 @@ body {
 	flex-direction: column;
 	border-radius: 1rem;
 	position: relative;
-	background: #4a4e6965;
+	background: linear-gradient(180deg, rgba(23, 23, 23, 0.2) 0%, #4a4e6965 94%);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(9.3px);
 	-webkit-backdrop-filter: blur(9.3px);
@@ -153,7 +153,7 @@ input {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: #767b9145;
+	background: linear-gradient(180deg, rgba(23, 23, 23, 0.2) 0%, #4a4e6965 94%);
 	backdrop-filter: blur(9.3px);
 	border-radius: 1rem;
 	text-decoration: none;
@@ -207,13 +207,14 @@ input {
 .card_5 {
 	grid-area: card_5;
 	border-radius: 1rem;
-	background-color: gray;
 	display: flex;
+	width: 100%;
+	max-height: 345px;
+	height: 100%;
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
-	background: #4a4e6965;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	background: linear-gradient(180deg, rgba(23, 23, 23, 0.2) 0%, #4a4e6965 94%);
 	backdrop-filter: blur(9.3px);
 	-webkit-backdrop-filter: blur(9.3px);
 	border: 0.5px solid rgba(255, 255, 255, 0.102);
@@ -259,4 +260,73 @@ input {
 	max-width: 60px;
 	margin-left: 8px;
 	border-radius: 1rem;
+}
+
+@media (max-width: 480px) {
+	.container {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-gap: 3rem;
+		grid-template-areas:
+			"card_3 card_3 card_3"
+			"card_1 card_1 card_2"
+			"card_4 card_4 card_4"
+			"card_5 card_5 card_5";
+		height: 100vh;
+		margin: 0, auto;
+		overflow-x: hidden;
+	}
+
+	body {
+		background-image: url("@/assets/bg2.jpg");
+		background-size: auto;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.card_1 {
+		grid-area: card_1;
+	}
+	.card_2 {
+		grid-area: card_2;
+		padding: 8px;
+	}
+	.card_3 {
+		grid-area: card_3;
+	}
+	.card_4 {
+		grid-area: card_4;
+	}
+	.card_5 {
+		grid-area: card_5;
+	}
+
+	.card_avatar_img {
+		width: 100%;
+		max-width: 40px;
+		margin-left: 8px;
+		border-radius: 1rem;
+	}
+	#txt {
+		font-size: 4rem;
+		color: #f2e9e4;
+		font-weight: 600;
+	}
+
+	.secondsContainer {
+		width: 40px;
+		height: 40px;
+	}
+
+	#seconds {
+		font-size: 2rem;
+		color: #4a4e69;
+		font-weight: 600;
+	}
+
+	.image {
+		p {
+			font-size: 2.5rem;
+		}
+	}
 }

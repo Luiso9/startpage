@@ -48,7 +48,7 @@
 				<i class="fa-brands fa-github-alt icon"></i>
 			</a>
 		</div>
-    <LastFM />
+		<LastFM />
 	</div>
 </template>
 
@@ -77,14 +77,7 @@ export default {
 	},
 	mounted() {
 		this.startTime();
-	},
-	beforeDestroy() {
-		clearTimeout(this.timer);
-	},
-	components: {
-		LastFM,
-	},
-	setup() {
+
 		const quote = [
 			"I hope it's come to no surprise.",
 			"Spare my pride.",
@@ -93,22 +86,17 @@ export default {
 			"I been on a dream.",
 		];
 
-		const currentQuote = ref(quote[0]);
-		let index = 0;
-		let timer;
-
-		const changeQuote = () => {
-			index = (index + 1) % quote.length;
-			currentQuote.value = quote[index];
-		};
-
-		onMounted(() => {
-			timer = setInterval(changeQuote, 240000);
-		});
-
-		onBeforeUnmount(() => {
-			clearInterval(timer);
-		});
+		const randomIndex = Math.floor(Math.random() * quote.length);
+		this.currentQuote = quote[randomIndex]; 
+	},
+	beforeDestroy() {
+		clearTimeout(this.timer);
+	},
+	components: {
+		LastFM,
+	},
+	setup() {
+		const currentQuote = ref("");
 
 		return { currentQuote };
 	},

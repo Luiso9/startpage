@@ -9,6 +9,7 @@
 				class="card_avatar_img"
 				:src="getImage(track.image, 'large')"
 				alt="Avatar"
+				loading="lazy"
 			/>
 			<div class="song_detail">
 				<h1 class="song_name">{{ track.name }}</h1>
