@@ -32,7 +32,7 @@ export default {
 			try {
 				const apiKey = import.meta.env.VITE_API_TOKEN;
 				const response = await axios.get(
-					`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=rj&api_key=${apiKey}&format=json&limit=4`
+					`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=rj&api_key=${apiKey}&format=json&user=snoozief9ur&limit=4`
 				);
 
 				this.recentTracks = Array.isArray(response.data.recenttracks.track)
